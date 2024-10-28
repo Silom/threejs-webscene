@@ -1,0 +1,15 @@
+{
+    "@typescript-eslint/member-delimiter-style": [
+        "warn",
+        {
+            "multiline": {
+                "delimiter": "none",
+                "requireLast": true
+            },
+            "singleline": {
+                "delimiter": "none",
+                "requireLast": false
+            }
+        }
+    ]
+}
