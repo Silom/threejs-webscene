@@ -2,7 +2,9 @@ import { useBox } from "@react-three/cannon"
 import { useGLTF, Sparkles } from "@react-three/drei"
 
 const ThreeModel = ({ ...props }) => {
-  const { nodes, materials } = useGLTF("/assets/models/model.gltf")
+  const { nodes, materials } = useGLTF(
+    process.env.ASSET_PATH + "/assets/models/model.gltf"
+  )
   const [ref] = useBox((_) => ({
     type: "Static",
     mass: 1,
