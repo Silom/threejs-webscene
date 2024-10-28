@@ -92,6 +92,9 @@ export default function () {
   //     />
   //   </>
   // )
+
+  console.log(process.env.ASSET_PATH)
+
   return (
     <BaseScene>
       <BaseCharacter

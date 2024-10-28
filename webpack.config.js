@@ -1,7 +1,10 @@
 const path = require("path")
 const CopyPlugin = require("copy-webpack-plugin")
+const Dotenv = require("dotenv-webpack")
 
-module.exports = {
+// env ghpage
+
+module.exports = (env) => ({
   entry: "./src/index.tsx",
   mode: "development",
   devtool: "source-map",
@@ -33,5 +36,8 @@ module.exports = {
       patterns: [{ from: "src/index.html", to: "." }],
       patterns: [{ from: "src/index.css", to: "." }],
     }),
+    new Dotenv({
+      path: env.ghpage ? "./ghpage.env" : "dev.env",
+    }),
   ],
-}
+})

@@ -12,7 +12,9 @@ export const FloppyModel: React.FC<IFloppyModelProps> = ({
   onClick,
   ...props
 }) => {
-  const { nodes, materials } = useGLTF("/floppy_gltf/scene.gltf")
+  const { nodes, materials } = useGLTF(
+    process.env.ASSET_PATH + "/floppy_gltf/scene.gltf"
+  )
   return (
     <group
       {...props}
@@ -40,4 +42,4 @@ export const FloppyModel: React.FC<IFloppyModelProps> = ({
   )
 }
 
-useGLTF.preload("/floppy_gltf/scene.gltf")
+useGLTF.preload(process.env.ASSET_PATH + "/floppy_gltf/scene.gltf")

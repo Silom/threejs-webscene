@@ -12,8 +12,9 @@ export const ComputerModel: React.FC<IComputerModelProps> = ({
   screenTpl,
   ...props
 }) => {
-  const { nodes, materials } = useGLTF("/computer_gltf/scene.gltf")
-  console.log(screenTpl)
+  const { nodes, materials } = useGLTF(
+    process.env.ASSET_PATH + "/computer_gltf/scene.gltf"
+  )
 
   return (
     <group {...props} dispose={null}>
@@ -56,4 +57,4 @@ export const ComputerModel: React.FC<IComputerModelProps> = ({
   )
 }
 
-useGLTF.preload("/computer_gltf/scene.gltf")
+useGLTF.preload(process.env.ASSET_PATH + "/computer_gltf/scene.gltf")

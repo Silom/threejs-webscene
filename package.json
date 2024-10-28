@@ -4,10 +4,10 @@
   "main": "index.js",
   "homepage": "https://Silom.github.io/threejs-webscene",
   "scripts": {
-    "start": "npm run build",
-    "build": "webpack",
-    "dev": "webpack --watch",
-    "predeploy": "npm run build",
+    "start": "webpack --env production ",
+    "dev": "webpack --env develop --watch",
+    "ghpages": "webpack --env ghpage ",
+    "predeploy": "npm run ghpages",
     "deploy": "gh-pages -d dist"
   },
   "author": "",
@@ -34,6 +34,8 @@
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv-webpack": "^8.1.0",
     "gh-pages": "^6.2.0"
   }
 }
