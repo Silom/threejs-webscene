@@ -34,7 +34,6 @@
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "dotenv-webpack": "^8.1.0",
     "gh-pages": "^6.2.0"
   }

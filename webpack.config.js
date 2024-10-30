@@ -33,8 +33,10 @@ module.exports = (env) => ({
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: "src/index.html", to: "." }],
-      patterns: [{ from: "src/index.css", to: "." }],
+      patterns: [
+        { from: "src/index.html", to: "." },
+        { from: "src/index.css", to: "." },
+      ],
     }),
     new Dotenv({
       path: env.ghpage ? "./ghpage.env" : "dev.env",

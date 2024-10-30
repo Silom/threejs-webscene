@@ -1,6 +1,6 @@
 import * as THREE from "three"
 import { useRef, useState } from "react"
-import { PerspectiveCamera, OrbitControls, Sky } from "@react-three/drei"
+import { Sky } from "@react-three/drei"
 import BaseScene from "./BaseScene"
 
 import AreaA from "./pages/AreaA"
@@ -13,8 +13,6 @@ import { FloppyModel } from "./models/FloppyModel"
 import BaseCharacter from "./models/Player"
 
 import ThreeModel from "./models/ThreeModel"
-
-// import html2canvas from "html2canvas"
 
 function Box(props: ThreeElements["mesh"]) {
   const ref = useRef<THREE.Mesh>(null!)
